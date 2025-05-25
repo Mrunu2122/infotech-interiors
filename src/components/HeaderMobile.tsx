@@ -78,21 +78,51 @@ const HeaderMobile = () => {
               </motion.div>
             ))}
 
-            {/* Social Icons */}
+            {/* Social Icons with Links */}
             <div className="flex gap-5 pt-2">
-              {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
-                <motion.a
-                  key={i}
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="text-[#D9D6CC] hover:text-[#B9975B] transition"
-                >
-                  <Icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[#D9D6CC] hover:text-[#B9975B] transition"
+              >
+                <Facebook className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[#D9D6CC] hover:text-[#B9975B] transition"
+              >
+                <Instagram className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[#D9D6CC] hover:text-[#B9975B] transition"
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                className="text-[#D9D6CC] hover:text-[#B9975B] transition"
+              >
+                <Youtube className="w-5 h-5" />
+              </motion.a>
             </div>
 
             {/* WhatsApp CTA */}
