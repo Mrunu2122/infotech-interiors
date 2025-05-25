@@ -88,16 +88,24 @@ const HeaderDesktop = () => {
         </motion.a>
 
         {/* WhatsApp CTA */}
-        <motion.a
-          whileHover={{ scale: 1.05, boxShadow: '0px 0px 10px #B9975B' }}
-          whileTap={{ scale: 0.95 }}
-          href="https://wa.me/1234567890?text=Hi%20Infotech%20Interiors!%20I'm%20interested%20in%20your%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-4 px-5 py-2 bg-[#B9975B] text-black font-semibold rounded-full shadow-md hover:shadow-xl transition-all"
-        >
-          WhatsApp
-        </motion.a>
+        <motion.button
+            whileHover={{ scale: 1.05, boxShadow: '0px 0px 10px #B9975B' }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                if (isMobile) {
+                  window.location.href = 'whatsapp://';
+                } else {
+                  window.open('https://web.whatsapp.com/', '_blank');
+                }
+              }
+            }}
+            className="ml-4 px-5 py-2 bg-[#B9975B] text-black font-semibold rounded-full shadow-md hover:shadow-xl transition-all"
+          >
+            WhatsApp
+          </motion.button>
+
       </div>
     </header>
   );

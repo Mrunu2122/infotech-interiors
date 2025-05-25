@@ -126,17 +126,25 @@ const HeaderMobile = () => {
             </div>
 
             {/* WhatsApp CTA */}
-            <motion.a
-              href="https://wa.me/1234567890?text=Hi%20Infotech%20Interiors!%20I'm%20interested%20in%20your%20services."
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="block px-6 py-3 mt-6 bg-[#B9975B] text-[#121212] font-semibold rounded-full text-center shadow-md hover:shadow-xl transition"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false);
+                if (typeof window !== 'undefined') {
+                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                  if (isMobile) {
+                    window.location.href = 'whatsapp://';
+                  } else {
+                    window.open('https://web.whatsapp.com', '_blank');
+                  }
+                }
+              }}
             >
               WhatsApp
-            </motion.a>
+            </motion.button>
+
           </motion.nav>
         )}
       </AnimatePresence>
