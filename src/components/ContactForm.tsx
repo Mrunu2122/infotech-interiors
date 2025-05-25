@@ -13,7 +13,7 @@ const ContactForm = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // Prevent hydration mismatch
+  if (!mounted) return null; 
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -45,11 +45,11 @@ const ContactForm = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
       >
-        <source
+        {/* <source
           src="https://cdn.videvo.net/videvo_files/video/free/2017-08/small_watermarked/170716_01_Canyon_06_preview.webm"
           type="video/webm"
         />
-        Your browser does not support the video tag.
+        Your browser does not support the video tag. */}
       </video>
 
       <div className="absolute inset-0 pointer-events-none">

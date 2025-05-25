@@ -8,7 +8,10 @@ const navItems = ['home', 'about', 'services', 'projects', 'testimonials', 'cont
 
 const HeaderDesktop = () => {
   return (
-    <header className="hidden lg:flex justify-between items-center px-16 py-5 bg-[#0f0f0f]/90 backdrop-blur-md shadow-[0_3px_10px_rgb(0,0,0,0.3)] sticky top-0 z-50">
+    <header
+      className="hidden lg:flex justify-between items-center px-16 py-5 bg-[#0f0f0f]/90 backdrop-blur-md shadow-[0_3px_10px_rgb(0,0,0,0.3)] sticky top-0 z-50"
+      style={{ position: 'relative' }} // <-- Added to prevent scroll offset warnings from Framer Motion
+    >
       {/* Animated Gradient Logo */}
       <motion.h1
         className="text-2xl font-bold font-serif bg-gradient-to-r from-[#B9975B] via-[#f3eac2] to-[#B9975B] text-transparent bg-clip-text select-none"
@@ -31,7 +34,7 @@ const HeaderDesktop = () => {
               {item}
             </span>
             <motion.span
-              layoutId="underline"
+              layoutId={`underline-${item}`}  // UNIQUE layoutId per nav item
               className="absolute bottom-0 left-0 h-[2px] w-full scale-x-0 bg-[#B9975B] origin-left group-hover:scale-x-100 transition-transform duration-300"
             />
           </Link>
@@ -40,7 +43,6 @@ const HeaderDesktop = () => {
 
       {/* Social + WhatsApp */}
       <div className="flex items-center gap-4">
-        {/* Social Icons - Responsive */}
         <motion.a
           href="https://www.facebook.com"
           target="_blank"
