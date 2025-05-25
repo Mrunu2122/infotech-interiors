@@ -24,12 +24,11 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <Industries />
-        <Testimonials />
-        <FAQ />
-        <ContactForm />
-        <Stats />
-        <Brands />
-        <Footer />
+      <ContactForm />
+      <FAQ />
+      <Stats />
+      <Brands />
+      <Footer />
       </main>
 
       <WhatsAppButton />
