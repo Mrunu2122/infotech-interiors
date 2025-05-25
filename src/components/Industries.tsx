@@ -9,7 +9,7 @@ import {
   Factory,
   ShoppingBag,
 } from 'lucide-react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const industries = [
   { name: 'Residential', icon: <Home size={48} /> },

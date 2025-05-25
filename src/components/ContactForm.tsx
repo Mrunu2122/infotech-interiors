@@ -117,7 +117,7 @@ const ContactForm = () => {
             >
               ✈️
             </motion.div>
-            <p>Thanks for reaching out! We'll get back to you soon.</p>
+            <p>Thanks for reaching out! We&apos;ll get back to you soon.</p>
           </motion.div>
         )}
       </div>
